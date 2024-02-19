@@ -1,0 +1,398 @@
+burger.me
+    Goal
+        Stack burger ingredients to make tasty/aesthetic burgers
+    Gameplay Loop
+        Choose your ingredients or quickplay (starts with last used ingredients or default burger ingredients)
+        Start game
+        Start with just a bottom bun
+        Ingredients begin to fall
+        Stack ingredients to add them to your burger
+        Position your burger in line with a condiment beam to add a condiment to your burger
+        Stack a top bun to finish your burger
+        A toothpick drops from the top of the screen to skewer your burger, finishing the game
+        Get points based on burger attributes
+            Tallness
+            Straightness
+            Ingredient Uniqueness
+            Signature Burgerness
+        If it's a new signature burger, signature burger entry is added to the burger book
+        If it's an old signature burger but is higher scoring than the previous iteration, player is asked whether they would like to replace the old signature burger photo in the burger book
+        Use the points you earned to buy new ingredients
+        Loop
+    Scenes
+        Main Menu
+        Burger Book
+        Main Game
+        Shopping List
+        Options
+        Scoring Screen
+    Bonuses
+        Burger Packs (Ingredients in alternate art styles)
+            Photo-Realistic
+            Drawn
+            Painted
+            My terrible drawings
+        Show professional picture of each signature burger in the burger book
+        If game gains popularity, pay fans to make new burger packs
+        Notable Burger Screen
+            Offshoot of the burger book
+            Includes two burgers for each scoring attribute
+            the burger with the highest score from that attribute
+            and the burger with the lowest score from that attribute
+    Main Menu
+        Buttons for Start, Options, Quit, Burger Book, and Shopping List
+        Start starts the game using last selected ingredients or default burger ingredients
+        Options brings you to the options menu
+        Quit closes the application
+        Burger Book takes you to the burger book scene
+        Shopping List allows you to pick ingredients before playing
+        burger.me text appears at the top of the screen
+        picture of a burger appears below burger.me text
+        navigation buttons appear below the burger picture
+        scattered around the sides of the main menu are pictures of signature burgers discovered by the player
+            pictures look like polaroids, with the name of the burger listed on the photo underneath the picture
+            clicking one of these photos leads to that page in the burger book
+    Burger Book
+        Burger Book text at the top left
+        Recipe List text just below Burger Book text
+        Scrollable recipe list along the left side of the screen
+            Recipe List can be filtered by ingredient
+            Recipe List can be searched by burger name
+        Signature burger title appears in the top middle of the screen
+        Head Chef burger photo appears to the left
+            Example of the perfect iteration of this burger
+            Alternate art style selector appears below this photo
+        Sous Chef burger photo appears to the right
+            Highest scoring iteration of this signature burger the player has created
+            Score of this burger is listed below this photo
+    Shopping List
+        Shopping list appears on the left
+            text input appears at the top of the list
+            ingredients appear as text is inputted
+            clicking or hitting enter adds an ingredient to the list
+            ingredients can also be added by clicking on them in the grocery
+            when an ingredient is added, the ingredient is grayed out in the grocery and 'added' text appears on it
+        The Grocery takes up the rest of the screen
+            Shelves start mostly empty
+            There is a label for every ingredient in the game, unavailable ingredients feature an out of stock button and an unlock button
+            The grocery is separated into categories such as Produce, Dairy, Meat, Bread, and Condiments
+            Can only select one ingredient at a time from the bread section
+            Otherwise, can select as many ingredients as there are available
+            Can choose between available alternate art styles at the bottom of the shopping list
+            Points available for purchasing ingredients appear at the top right
+    Main Game
+        Shopping list appears to the left
+        Main game appears to the right
+        Ingredients are checked off the shopping list as they stack onto the burger
+        Doubled items get crossed out
+        Tripled items get scribbled out
+        Quadrupled+ ingredients, nothing happens
+        condiment bottles slide in from off screen on either side, shoot a condiment, and retreat
+        Once the top bun lands, a toothpick descends from the top of the screen to skewer the burger
+        A polaroid is taken of the burger
+            screen flashes white
+            fades into scoring screen
+    Scoring Scene
+        Polaroid appears at the center of the screen
+            if it's a signature burger it already has a name and it floats to the top of the screen
+            it it's not a signature burger the player can input a burger name where the signature burger title would normally appear
+                when the player hits enter the burger floats to the top of the screen
+                if the player doesn't name the burger, it floats to the top of the screen without any text on the Polaroid
+        Scoring attributes appear below the Polaroid
+            take inspiration from the Pokemon Snap photo grading scene
+            Tallness is based on the total number of ingredients stacked
+            Straightness is based on an average of all the angles from the center of the bottom bun to the center of each ingredient
+            Ingredient Synergy is based on lists of related ingredients, the more completed lists, the higher the score
+            Signature Bonus is a set amount given based on the signature burger created
+        Ingredients from the completed burger appear equally spaced out on either side
+    THE GAME PLAN
+        Working Demo
+            Movable Bottom Bun
+            Falling Ingredients
+                Apply Gravity
+                Instantiate with random ingredient and position
+            Each ingredient is dropped at the same rate within a set range
+                meaning the more ingredients are chosen the harder the game becomes
+            Figure out how to stick ingredients together as they stack on the bottom bun
+            Condiment bottles glide in from the side, blast a random (but telegraphed) area
+                Make sure condiment is applied to burger when the burger is in that area
+                condiments function same as ingredients in that each condiment appears at the same rate (within a range) independant of other condiments
+            Draw pixelated ingredients/condiments/condiment bottles
+                Apply sprites to game objects
+            Find kitchen stock photo to blur for the main game background
+        Main Menu
+            add burger.me text
+            draw burger icon (probably combine ingredient sprites)
+            Create Buttons
+            Implement Start and Quit Buttons
+            Implement options button after creating temporary options scene
+            Implement Burger photos after finishing the burger book
+            Implement burger book button after creating temporary burger book scene
+            Implement shopping list button after creating temporary shopping list scene
+        Working Burger Book
+            START WORK HERE
+        Working Shopping List
+        Scoring/Currency System
+        Sound System (background noise/music/sound effects)
+        Clean Up Working Beta
+        Add Remaining Recipes/Ingredients
+        Bonuses!
+    Recipes
+        The Standard
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Lettuce
+            Pickles
+            White Onion
+            Ketchup
+            Mustard
+        The Grilled Cheese
+            Texas Toast
+            Cheddar Cheese
+        The Grilled Cheese Deluxe
+            Texas Toast
+            Cheddar Cheese
+            American Cheese
+            Swiss Cheese
+            Mustard
+        The Soft Pretzel
+            Pretzel Bun
+            Sauerkraut
+            Horseradish
+            Meat
+            Swiss Cheese
+            Stoneground Mustard
+        The BLT
+            Texas Toast
+            Bacon
+            Lettuce
+            Tomato
+            Mayonnaise
+        The Cheeseburger
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Lettuce
+            White Onion
+            Pickles
+            American Cheese
+            Ketchup Mustard
+        The Bacon Burger
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Lettuce
+            White Onion
+            Pickles
+            Ketchup
+            Mustard
+        The Bacon Cheeseburger
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Lettuce
+            White Onion
+            Pickles
+            American Cheese
+            Bacon
+            Ketchup
+            Mustard
+        The Plain
+            Sesame Seed Bun
+            Meat
+            Ketchup
+        The Boring
+            Sesame Seed Bun
+            Meat
+        The Ring of Fire
+            Sesame Seed Bun
+            Meat
+            Pickled Jalepenos
+            Pepperjack Cheese
+            Onion Ring
+            Hot Sauce
+        The Nacho Burger
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Red Onion
+            Jalepeno
+            Cheddar Cheese
+            Tortilla Chips
+            Avocado
+        The Chicken Sandwich
+            Buttermilk Bun
+            Fried Chicken
+            Pickles
+        The Sloppy Joe
+            Buttermilk Bun
+            Meat Chili
+            Cabbage Slaw
+        The Southern Barbecue
+            Buttermilk Bun
+            Pulled Pork
+            Cabbage Slaw
+            Barbecue Sauce
+        The Greek
+            Sesame Seed Bun
+            Meat
+            Tomato
+            Red Onion
+            Cucumber
+            Feta Cheese
+            Tzatziki
+        The Hawaiian
+            Sesame Seed Bun
+            Meat
+            Grilled Pineapple
+            Caramelized Onions
+            Swiss Cheese
+            Teriyaki Sauce
+        The Fishwich
+            Buttermilk Bun
+            Fried Cod
+            Cabbage Slaw
+            Pickles
+            Tartar Sauce
+        The Mack
+            Sesame Seed Bun
+            American Cheese
+            Lettuce
+            Meat
+            Onion
+            Lettuce
+            Pickles
+            Meat
+            White Onion
+            Fry Sauce
+        The Double
+            Sesame Seed Bun
+            Meat
+            American Cheese
+            Meat
+            American Cheese
+            Lettuce
+            White Onion
+            Tomato
+            Pickles
+            Ketchup
+            Mustard
+        The Cali
+            Sesame Seed Bun
+            Meat
+            Lettuce
+            Tomato
+            White Onion
+            Pickles
+            Fries
+            Secret Sauce
+        The Patty Melt
+            Rye Bread
+            Meat
+            Caramelized Onions
+            Swiss Cheese
+        The Sunny Side Up
+            Buttermilk Bun
+            Meat
+            Fried Egg
+            White Onion
+            Tomato
+        The Breakfast
+            Buttermilk Bun
+            Meat
+            White Onion
+            Tomato
+            Fried Egg
+            Bacon
+            American Cheese
+            Hollandaise
+        The Toad in the Onion
+            Buttermilk Bun
+            Meat
+            Fried Egg
+            Onion Ring
+        The English Breakfast
+            Texas Toast
+            Meat
+            Fried Egg
+            Mushrooms
+            Bacon
+            Tomato
+        The Kimchi Fried Rice
+            Sesame Seed Bun
+            Meat
+            Kimchi
+            Fried Egg
+            Green Onion
+            Sriracha
+        The Double Bacon Cheeseburger
+            Meat
+            American Cheese
+            Meat
+            American Cheese
+            White Onion
+            Lettuce
+            Tomato
+            Pickles
+            Bacon
+            Ketchup
+            Mustard
+    Ingredients
+        Proteins
+            Ground Beef (default)
+            Fried Chicken
+            Pulled Pork
+            Fried Cod
+            Bacon
+        Produce
+            Cabbage
+            Red Onion
+            White Onion (default)
+            Lettuce (default)
+            Tomato (default)
+            Jalapeno
+            Avacado
+            Cucumber
+            Pineapple
+            Mushrooms
+            Green Onion
+        Dairy
+            Cheddar Cheese
+            Pepperjack Cheese
+            American Cheese (default)
+            Swiss Cheese
+            Feta Cheese
+            Eggs
+        Pantry
+            Pickles (Default)
+            Kimchi
+            Pickled Jalapenos
+            Sauerkraut
+            Tortilla Chips
+            Caramelized Onions
+            Onion Rings
+            French Fries
+            Meat Chili
+        Condiments
+            Mayonnaise
+            Ketchup (default)
+            Mustard (default)
+            Relish
+            Horseradish
+            Stoneground Mustard
+            Teriyaki Sauce
+            Tzatziki
+            Fry Sauce
+            Hot Sauce
+            Hollandaise
+            Tartar Sauce
+            Secret Sauce
+            Sriracha
+            Barbecue Sauce
+        Breads
+            Sesame Seed Bun (default)
+            Buttermilk Bun
+            Texas Toast
+            Pretzel Bun
+            Rye Bread
