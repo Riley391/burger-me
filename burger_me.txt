@@ -130,13 +130,23 @@ burger.me
             Implement burger book button after creating temporary burger book scene
             Implement shopping list button after creating temporary shopping list scene
         Working Burger Book
-            START WORK HERE
+            Place Burger Book, Recipe List, and sig. burger title text
+            Place recipe list on the left
+                Selected recipe should always be in the middle of the recipe list
+                can scroll to other recipes
+                think original Sinnoh Pokedex
+            Implement Filter and Search Functions
+            Place Head Chef and Sous Chef photos
+            Place score underneath Sous Chef photo
         Working Shopping List
         Scoring/Currency System
+        Options Menu
         Sound System (background noise/music/sound effects)
         Clean Up Working Beta
         Add Remaining Recipes/Ingredients
         Bonuses!
+            Alternate art styles
+            Notable Burger Screen
     Recipes
         The Standard
             Sesame Seed Bun
