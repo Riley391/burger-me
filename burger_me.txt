@@ -139,6 +139,7 @@ burger.me
             Place Head Chef and Sous Chef photos
             Place score underneath Sous Chef photo
         Working Shopping List
+            START HERE
         Scoring/Currency System
         Options Menu
         Sound System (background noise/music/sound effects)
